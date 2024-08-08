@@ -12,7 +12,7 @@
 //     alert(`${num1} y ${num2} son iguales`)
 // }
 // // ===, !==
-const dia = parseInt(prompt(`indique un numero de la semana`));
+const dia = parseInt(prompt("indique un numero de la semana"));
 
 switch (dia) {
   case 1:
