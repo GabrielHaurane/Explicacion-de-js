@@ -15,8 +15,13 @@ function tabla(){
     document.write(`</tr>`);
 }
 }
+/*
+function saludar (nombre){
+    document.write(`<p>hola ${nombre}</p>`)
+}
+    */
 console.log(dados());
-
+/*
 document.write(`<table>`);
 document.write(`<tr>`);
 document.write(`<th>dado 1</th>`);
@@ -24,8 +29,6 @@ document.write(`<th>dado 2</th>`);
 document.write(`</tr>`);
 tabla();
 document.write(`</table>`);
-
-
-const pelicula = ()=>{
-    
-}
+*/
+// const nombre = prompt(`ingrese un nombre`);
+// saludar(nombre);

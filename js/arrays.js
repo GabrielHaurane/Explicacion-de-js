@@ -1,87 +1,89 @@
-const arreglo = [`titulo`, `duracion`, `idioma`, 2000, true];
+const pelicula = [`titulo`, `duracion`, `idioma`, 2000, true];
+
 const vacio = [];
 
-console.log(arreglo.length);
-console.log(arreglo);
+console.log(pelicula.length);
+console.log(pelicula);
 
-// document.write(`<p>${arreglo[0]} </p>`)
-// document.write(`<p>${arreglo[1]} </p>`)
+// document.write(`<p>${pelicula[0]} </p>`)
+// document.write(`<p>${pelicula[1]} </p>`)
 
-function mostrarArreglo() {
+function mostrarpelicula() {
   document.write(
-    `<h2>el arreglo tiene la candidad de ${arreglo.length} elementos</h2> `
+    `<h2>el pelicula tiene la candidad de ${pelicula.length} elementos</h2> `
   );
 
   document.write(`<ul>`);
-  for (let i = 0; i < arreglo.length; i++) {
+  for (let i = 0; i < pelicula.length; i++) {
     document.write(`<li>`);
-    document.write(`<p>${arreglo[i]} </p>`);
+    document.write(`<p>${pelicula[i]} </p>`);
     document.write(`</li>`);
   }
   document.write(`</ul>`);
 }
-mostrarArreglo();
+mostrarpelicula();
+
+const mostrarArray = (vacio, titulo)=>{
+  document.write(`<h3>${titulo}, elementos:${vacio.length} </h3>`)
+  document.write(`<ol>`);
+  // for(let i = 0; i < arrys.length; i++){
+  //   document.write(`<li>${arrys[i]}</li>`);
+  // }
+
+  vacio.map((nada)=> document.write(`<li>${vacio}</li>`))
+  document.write(`</ol>`);
+}
+
 
 // unshift sirve para agrgar un elemento al inicio del array
-arreglo.unshift(`nombre`, `edad`);
-mostrarArreglo();
+pelicula.unshift(`nombre`, `edad`);
+mostrarpelicula();
 // push sirve para agregar un elemento al final del array
-arreglo.push(`🎈`);
-mostrarArreglo();
+pelicula.push(`🎈`);
+mostrarpelicula();
 // splice sirve para agregar un elemento en el medio del array
-arreglo.splice(3, 0, `avatar`);
-mostrarArreglo();
+pelicula.splice(3, 0, `avatar`);
+mostrarpelicula();
 // shift sirve para eliminar el primero del array
-arreglo.shift();
-mostrarArreglo();
+pelicula.shift();
+mostrarpelicula();
 // shift sirve para eliminar el ultimo del array
-arreglo.pop();
-mostrarArreglo();
+pelicula.pop();
+mostrarpelicula();
 // splice utilizado para eliminar elementos del medio
-arreglo.splice(3, 1);
-mostrarArreglo();
-arreglo.splice(2, 2);
-mostrarArreglo();
+pelicula.splice(3, 1);
+mostrarpelicula();
+pelicula.splice(2, 2);
+mostrarpelicula();
 // modicar un elemento
-arreglo[3] = false;
-mostrarArreglo();
+pelicula[3] = false;
+mostrarpelicula();
 
-console.log(arreglo);
+console.log(pelicula);
 
-arreglo.push(
-  "Harry Potter y la piedra filosofal",
-  "Rambo 1",
-  "Rambo 2",
-  "Harry Potter y la cámara secreta",
-  "Rambo 3",
-  "Harry Potter y el prisionero de Azkaban",
-  "Harry Potter y la Orden del Fénix"
-);
-mostrarArreglo();
-// toma el primer elemento que cumple la funcion
 
-// Buscar un elemento específico en el array
-// const harryPotter = arreglo.find((item) => item === 'Harry Potter y la cámara secreta');
-// const vengadores = arreglo.find((item) => item === 'Vengadores: Infinity War');
-// const harryPotter2 = arreglo.find((item) => item.toLowerCase().includes('harry potter'));
 
-// // Imprimir los resultados de la búsqueda en la consola
-// console.log(harryPotter); // 'Harry Potter y la cámara secreta'
-// console.log(vengadores);  // 'Vengadores: Infinity War'
-// console.log(harryPotter2); // 'Harry Potter y la piedra filosofal' (primer elemento que contiene 'harry potter')
+// // otro array
+// vacio.push(`marvel 1`, `marvel 2`, `marvel 3`, `marvel 4`,`DC 1`,`DC 2`,`DC 3`);
 
-// // Mostrar el resultado de la búsqueda en el documento HTML
-// document.write(`<p>Peli buscada: ${harryPotter}</p>`);
+// console.log(vacio)
 
-// const sagaRambo = arreglo.filter((elemento)=> elemento.includes('Rambo'));
-// console.log(sagaRambo)
+// // Buscar un elemento específico en el array
 
-// document.write(`<h2>Array de Rambo: cantidad de elementos ${sagaRambo.length}</h2>`
-// );
+// const existeTitulo = vacio.find((nada) => nada === `marvel 1`);
+// const existeSubtitulo = vacio.find((nada) => nada === `marvel 2`);
+// const existeDuracion = vacio.find((nada) => nada.includes(`marvel`));
+// console.log(existeTitulo);
+// console.log(existeSubtitulo);
+// console.log(existeDuracion);
 
-// document.write(`<ol>`);
-// sagaRambo.map((item, posicion)=> document.write(`<li>${item} - posicion: ${posicion}</li>`) )
-// document.write(`</ol>`);
+// const prueba = `hola mundo`;
+// console.log(prueba.includes(`hola`));
+// console.log(prueba.includes(`js`));
+// console.log(pelicula.includes(`marvel 1`))
+// const listaMarvel = vacio.filter((nada) => nada.includes(`dc`))
+// console.log(listaMarvel);
 
-// //forEach
-// series.forEach((item )=> console.log('forEach - '+ item) )
+// // nuevo array
+// mostrarArray(listaMarvel, `lista de marvel`);
+
